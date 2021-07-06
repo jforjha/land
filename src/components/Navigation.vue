@@ -98,7 +98,7 @@ export default {
 <style lang="scss" scoped>
 header {
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
+  z-index: 50;
   width: 100%;
   position: fixed;
   transition: 0.5s ease all;
@@ -133,8 +133,8 @@ header {
       padding-bottom: 4px;
       border-bottom: 1px solid transparent;
       &:hover {
-        color: gold;
-        border-color: gold;
+        color: #e5d2a5;
+        border-color: #e5d2a5;
       }
     }
     .branding {
@@ -182,7 +182,7 @@ header {
         .link {
           color: #000;
           &:hover {
-            color: gold;
+            color: #e5d2a5;
           }
         }
       }
@@ -218,5 +218,6 @@ header {
 .logo {
   font-family: "Poppins", sans-serif;
   font-size: 25px;
+  color: #e5d2a5;
 }
 </style>

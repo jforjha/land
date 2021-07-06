@@ -1,12 +1,14 @@
 <template>
   <div class="app">
     <Navigation />
+
     <router-view />
   </div>
 </template>
 
 <script>
 import Navigation from "./components/Navigation.vue";
+
 export default {
   name: "App",
   components: {
@@ -25,9 +27,9 @@ export default {
   font-weight: 400;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
-} 
+}
 .app {
   min-height: 100vh;
   position: relative;
