@@ -159,6 +159,7 @@ export default {
     // border: black solid 5px;
     display: flex;
     flex-direction: row;
+    
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column-reverse;
@@ -195,9 +196,11 @@ export default {
       height: 450px;
       width: 450px;
       object-fit: contain;
+      margin-top: 50px;
       border-radius: 80px;
       margin-right: 200px;
       margin-left: 50px;
+      
 
       &:hover {
         transform: scale(1.1);
