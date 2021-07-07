@@ -1,4 +1,5 @@
 <template>
+  <Navigation />
   <div class="home">
     <section class="hero">
       <div class="hero-text container">
@@ -86,10 +87,11 @@
 </template>
 
 <script>
+import Navigation from "../components/Navigation.vue";
 import Footer from "../components/Footer.vue";
 export default {
   name: "Home",
-  components: { Footer },
+  components: { Footer, Navigation },
 };
 </script>
 
@@ -159,7 +161,7 @@ export default {
     // border: black solid 5px;
     display: flex;
     flex-direction: row;
-    
+
     @media (max-width: 768px) {
       display: flex;
       flex-direction: column-reverse;
@@ -200,7 +202,6 @@ export default {
       border-radius: 80px;
       margin-right: 200px;
       margin-left: 50px;
-      
 
       &:hover {
         transform: scale(1.1);

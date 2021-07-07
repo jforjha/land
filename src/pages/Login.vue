@@ -12,7 +12,7 @@ export default {};
 </script>
 
 <style>
-.link1{
-    margin-top: 100px;
+.dashboard {
+    
 }
 </style>
