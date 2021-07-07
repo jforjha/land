@@ -10,15 +10,15 @@
           <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">About</router-link>
+          <router-link class="link" :to="{ name: 'About' }">About</router-link>
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">Contact</router-link>
-        </li>
-        <li>
-          <router-link class="link" :to="{ name: '' }"
-            >Login/SignUp</router-link
+          <router-link class="link" :to="{ name: 'Contact' }"
+            >Contact</router-link
           >
+        </li>
+        <li>
+          <router-link class="link" :to="{ name: 'Login' }">Login</router-link>
         </li>
       </ul>
       <div class="icon">
