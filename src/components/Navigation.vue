@@ -22,12 +22,14 @@
         </li>
       </ul>
       <div class="icon">
-        <i
+        <img
           @click="toggleMobileNav"
           v-show="mobile"
-          class="far fa-bars"
+          class="menu"
           :class="{ 'icon-active': mobileNav }"
-        ></i>
+          src="../assets/menu.png"
+          alt="menu"
+        />
       </div>
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
@@ -35,14 +37,18 @@
             <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
           </li>
           <li>
-            <router-link class="link" :to="{ name: '' }">About</router-link>
+            <router-link class="link" :to="{ name: 'About' }"
+              >About</router-link
+            >
           </li>
           <li>
-            <router-link class="link" :to="{ name: '' }">Contact</router-link>
+            <router-link class="link" :to="{ name: 'Contact' }"
+              >Contact</router-link
+            >
           </li>
           <li>
-            <router-link class="link" :to="{ name: '' }"
-              >Login/SignUp</router-link
+            <router-link class="link" :to="{ name: 'Login' }"
+              >Login</router-link
             >
           </li>
         </ul>
@@ -75,7 +81,7 @@ export default {
     },
     updateScroll() {
       const scrollPosition = window.scrollY;
-      if (this.scrolledNav > 50) {
+      if (scrollPosition > 50) {
         this.scrolledNav = true;
         return;
       }
@@ -97,7 +103,7 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 50;
   width: 100%;
   position: fixed;
@@ -158,9 +164,13 @@ header {
       top: 0;
       right: 24px;
       height: 100%;
-      i {
+      .menu {
         cursor: pointer;
         font-size: 24px;
+        height: 40px;
+        width: 40px;
+        object-fit: contain;
+
         transition: 0.8s ease all;
       }
     }

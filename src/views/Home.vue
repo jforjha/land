@@ -3,7 +3,7 @@
   <div class="home">
     <section class="hero">
       <div class="hero-text container">
-        <h4>Investment Made Easy</h4>
+        <h4 class="h4">Investment Made Easy</h4>
         <hr class="" />
         <h2>With <span>Coin Ramen</span><br /></h2>
         <!-- <button class="button">Get Started</button> -->
@@ -100,11 +100,22 @@ export default {
   background: url("../assets/btc.jpg") center center / cover no-repeat fixed;
   position: relative;
   height: 100vh;
+  width: 100vw;
+  @media (max-width: 1280px) {
+    display: block;
+    object-fit: contain;
+  }
 
   img {
+    border: solid black 10px;
     object-fit: cover;
     height: 100%;
     width: 100%;
+   @media (max-width: 1280px) {
+    height: 100vh;
+    object-fit: cover;
+
+  }
   }
 
   .hero-text {
@@ -113,7 +124,7 @@ export default {
     flex-direction: column;
     justify-content: flex-end;
     position: absolute;
-    color: #fff;
+    color: #000;
     padding-bottom: 45px;
     padding-left: 55px;
 
@@ -121,6 +132,7 @@ export default {
       text-transform: uppercase;
       font-size: 22px;
       padding-bottom: 4px;
+      font-weight: bold;
     }
 
     h2 {
@@ -166,6 +178,7 @@ export default {
       display: flex;
       flex-direction: column-reverse;
     }
+
     .first-content {
       // border: black solid 5px;
       display: flex;
@@ -176,6 +189,15 @@ export default {
       @media (max-width: 768px) {
         margin-left: 10px;
         align-items: center;
+        margin-top: 0;
+      }
+      @media (max-width: 1280px) {
+        display: flex;
+        flex-direction: column;
+        // width: 600px;
+
+        margin-left: 100px;
+        margin-right: auto;
       }
 
       .h1 {
@@ -185,13 +207,31 @@ export default {
         font-weight: bolder;
         margin-top: 60px;
         margin-bottom: 20px;
-        @media (max-width: 768px) {
-          font-size: 30px;
+        @media (max-width: 1280px) {
+          font-size: 2rem;
+          line-height: 35px;
+          justify-content: center;
+          padding-left: 10%;
+          padding-right: 10%;
+          margin-top: 0%;
         }
+        // @media (max-width: 1280px) {
+        //   display: block;
+        //   font-size: 3rem;
+        //   font-weight: bolder;
+        //   margin-top: 60px;
+        //   margin-bottom: 20px;
+        // }
       }
       .p {
         font-size: 20px;
         font-weight: bold;
+        @media (max-width: 768px) {
+          font-size: 15px;
+          line-height: 25px;
+          padding-left: 10%;
+          padding-right: 10%;
+        }
       }
     }
     .image {
@@ -209,11 +249,20 @@ export default {
         cursor: pointer;
       }
       @media (max-width: 768px) {
-        height: 350px;
-        width: 350px;
+        height: 250px;
+        width: 250px;
         object-fit: contain;
         border-radius: 40px;
-        margin: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        justify-items: center;
+      }
+      @media (max-width: 1280px) {
+        height: 900px;
+        width: 400px;
+        object-fit: contain;
       }
     }
   }
